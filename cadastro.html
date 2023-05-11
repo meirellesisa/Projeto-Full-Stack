@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cad Page</title>
+    <link rel="stylesheet" href="./style-cadastro.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+      <div id="cdProdutos" onsubmit="cadastroProdutos()">
+            <form name="cadastroProduto">
+
+               <label>Código Produto</label><br/>
+              <input type="text" name="txtCodigo" id="codigo"/><br/><br/>
+
+              <label>Nome</label><br/>
+              <input type="text" name="txtNome" id="nome"/><br/><br/>
+
+              <label>Descrição</label><br/>
+              <input type="text" name="txtDescricao" id="descricao"/><br/><br/>
+
+              <label>Preço</label><br/>
+              <input type="text" name="txtPreco" id="preco"/><br/><br/>
+
+              <input type="submit" value="Adicionar produto"/> 
+            </form>
+
+        </div>
+    </div>
+    
+    <script src="cadastro.js"></script>
+</body>
+</html>

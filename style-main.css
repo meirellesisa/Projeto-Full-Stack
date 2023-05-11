@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  }
+
+ body{
+  
+  width: 100vw;
+  height: 100vh;
+  font-size: 14pt;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  
+
+ }
+
+
+   
+ 
+ 
+  .container{
+    width: 100vw;
+    height: 100vh;
+    background:  cadetblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    }
+
+    
+
+    div#tabela-produtos{
+        background-color: #6C7A89;
+        width: 680px;
+        height: 410px;
+        padding: 20px 20px 50px 10px ;
+        border-radius: 10px;
+        text-align: center;
+        
+    }
+    table{
+      border: 1px solid black;
+      
+      border-collapse: collapse;
+    }
+   
+  
+    td{
+        padding: 7px;
+        border: 1px solid black;
+        
+        
+
+        
+        
+    }
