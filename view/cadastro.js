@@ -1,3 +1,4 @@
+const apiUrl = 'https://31d582ed-bc29-4874-ad2e-e8e756e26b49.id.repl.co'
 
 function fazPost(url, object){
 
@@ -19,7 +20,7 @@ function cadastroProdutos() {
 
 
     event.preventDefault()
-    let url = "http://localhost:3000/produtos"
+    let url = `${apiUrl}/produtos`
     let codigo = document.getElementById("codigo").value
     let nome = document.getElementById("nome").value
     let descricao = document.getElementById("descricao").value

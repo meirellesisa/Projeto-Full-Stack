@@ -4,7 +4,6 @@ const morgan  = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-
 const rotaProdutos = require('./routes/produtos');
 
 
@@ -18,9 +17,10 @@ app.use(
   })
 )
 
-
 //devemos declarar as rotas criadas AQUI!!
 app.use('/produtos', rotaProdutos);
+
+app.use('/', express.static('view/'));
 
 //quando não encotar rota
 app.use((requisicao, resposta, depois)=>{

@@ -1,5 +1,7 @@
-﻿function listarProdutos() {
-  fetch(`http://localhost:3000/produtos`)
+const apiUrl = 'https://31d582ed-bc29-4874-ad2e-e8e756e26b49.id.repl.co'
+
+function listarProdutos() {
+  fetch(`${apiUrl}/produtos`)
     .then(resposta => {
       return resposta.json()
     })
