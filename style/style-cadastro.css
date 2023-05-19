@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div#caixa {
+  background-color: #6c7a89;
+  width: 300px;
+  float: right;
+  margin-right: 100px;
+  font-size: large;
+  padding: 20px;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+}
+
+button#buscar {
+  position: relative;
+  top: -40px;
+  left: 18px;
+  padding: 3px;
+  border-radius: 10px;
+  float: right;
+  border: none;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: cadetblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+div#cdProdutos {
+  background-color: #6c7a89;
+  font-size: 15pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 300px;
+  height: 425px;
+  padding: 30px 10px 10px 30px;
+  border-radius: 10px;
+  text-align: justify;
+}

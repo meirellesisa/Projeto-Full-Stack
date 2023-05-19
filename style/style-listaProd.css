@@ -7,20 +7,59 @@
 
  body{
   
-  width: 100vw;
-  height: 100vh;
-  font-size: 14pt;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   color: black;
-  
+  background:  cadetblue;
 
  }
 
+ div#caixa{
+
+  width: 350px;
+  float: right;
+  margin-right: 100px;
+  font-size: large;
+  padding: 15px;
+
+  
+ }
+
+ input{
+  border-radius: 1px;
+  border: none;
+  width: 190px;
+ }
+
+ button#buscar{
+
+  position: relative;
+  top: -43px;        
+  left: -20px;
+  padding: 5px;
+  border-radius: 10px;
+  float: right;
+  border: none;
+ }
+
+
+  
+ table{
+  width: 990px;
+  background-color: #6C7A89;
+  margin-left: 200px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  
+ }
+ td{
+  padding: 10px;
+ }
 
    
  
  
-  .container{
+ /* .container{
     width: 100vw;
     height: 100vh;
     background:  cadetblue;

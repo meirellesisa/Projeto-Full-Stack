@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style-listaProd.css" />
+    <link rel="icon" type="image/png" href="./assets/listar-icon.png" />
+    <title>Lista</title>
+  </head>
+  <body>
+    <div id="buscaUnica">
+
+      <div id="caixa">
+        <form onsubmit="buscarProduto()">
+          <label>Digite o Id do produto</label><br />
+           <input type="text" name="txtNome" id="nome" /><br /><br />
+           <button id="buscar" type="submit">buscar produto</button>
+
+      </div>
+
+      </form>
+      <table border="1" id="busca">
+        <thead>
+          <th class="center">ID</th>
+          <th>Produto</th>
+          <th>Descrição</th>
+          <th>Valor</th>
+        </thead>
+        <tbody id="tbody1"></tbody>
+
+
+    </div>
+    <div id="conteudo">
+      <table border="1">
+        <thead>
+          <th class="center">ID</th>
+          <th>Produto</th>
+          <th>Descrição</th>
+          <th>Valor</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script src="javascript/main.js"></script>
+  </body>
+</html>

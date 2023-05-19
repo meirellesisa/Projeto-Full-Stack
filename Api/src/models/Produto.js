@@ -4,9 +4,9 @@ const produtoSchema = new mongoose.Schema(
 
     {
         id: {type: String },
-        nome: {type: String, required: true},
+        nome: {type: String},
         descricao: {type: String},
-        preco: {type: String, required: true}
+        preco: {type: String}
     }
 );
 

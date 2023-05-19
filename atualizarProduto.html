@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastrar</title>
+    <title>Atualizar</title>
     <link rel="stylesheet" href="./style/style-cadastro.css" />
-    <link rel="icon" type="image/png" href="./assets/cadastro-icon.png" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="icon" type="image/png" href="./assets/atualizar-icon.png" />
   </head>
   <body>
     <div class="container">
-      <div id="cdProdutos" onsubmit="cadastroProdutos()">
+      <div id="cdProdutos" onsubmit="updateProdutos()">
         <form name="cadastroProduto">
+          <label>Id</label><br />
+          <input type="text" name="txtNome" id="id" /><br /><br />
+
           <label>Nome</label><br />
           <input type="text" name="txtNome" id="nome" /><br /><br />
 
@@ -22,11 +24,11 @@
           <label>Preço</label><br />
           <input type="text" name="txtPreco" id="preco" /><br /><br />
 
-          <input type="submit" value="Adicionar produto" />
+          <input type="submit" value="Atualizar produto" />
         </form>
       </div>
     </div>
 
-    <script src="javascript/cadastro.js"></script>
+    <script src="javascript/atualizaProd.js"></script>
   </body>
 </html>
