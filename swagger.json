@@ -1,0 +1,195 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API de Produtos",
+    "description": "Api para controlar produtos dentro de uma loja.",
+    "version": "0.0.1",
+    "contact": {
+      "name": "Suport a Devs",
+      "email": "devsuport@gmail.com",
+      "url": "https://github.com/meirellesisa/Projeto-Full-Stack"
+    },
+    "license": {
+      "name": "GPLv3",
+      "url": "https://www.gnu.org/licenses/gpl-3.0.html"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://projeto-full-stack.meirellesisa.repl.co",
+      "description": "API de Produtos"
+    }
+  ],
+  "paths": {
+    "/produtos": {
+      "get": {
+        "summary": "Recupera todos os produtos",
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Produtos"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Cadastrar um novo produto",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Produto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Produto-id"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/produtos/{id}": {
+      "get": {
+        "summary": "Recupera um produto pelo ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Produto-id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Produto não encontrado",
+            "content": {
+              "application/json": {
+                "example": "ID não foi encontrado"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar um produto",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Produto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "content": {
+              "application/json": {
+                "example": "Produto Atualizado com Sucesso"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar um Produto",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Sucesso"
+          },
+          "500": {
+            "description": "Erro no Servidor"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Produto-id": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "descricao": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          }
+        }
+      },
+      "Produto": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "descricao": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          }
+        }
+      },
+      "Produtos": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Produto"
+        }
+      }
+    }
+  }
+}
