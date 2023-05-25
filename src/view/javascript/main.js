@@ -1,8 +1,15 @@
-function buscarProduto() {
+import config from "./config.json" assert { type: "json" };
+
+const buscarInput = document.getElementById("buscar");
+
+buscarInput.addEventListener("click", (event) =>  buscarProduto(event));
+
+function buscarProduto(event) {
+  console.log(event)
   event.preventDefault()
   let id = document.getElementById("nome").value
 
-  fetch(`http://localhost:3000/produtos/${id}`)
+  fetch(`${config.api_url}/produtos/${id}`)
     .then((resposta) => {
       return resposta.json()
     })
@@ -24,7 +31,7 @@ function buscarProduto() {
     })
 }
 
-let url = "http://localhost:3000/produtos"
+let url = `${config.api_url}/produtos`
 
 function fazGet(url) {
   fetch(url)
@@ -33,8 +40,7 @@ function fazGet(url) {
     })
     .then((corpo) => {
       console.log(corpo)
-      tamanho = corpo.length
-
+      const tamanho = corpo.length
       let tbody = document.getElementById("tbody")
       for (let i = 0; i < tamanho; i++) {
         let tr = tbody.insertRow()

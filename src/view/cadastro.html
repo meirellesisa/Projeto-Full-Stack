@@ -11,8 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <div id="cdProdutos" onsubmit="cadastroProdutos()">
-        <form name="cadastroProduto">
+      <div id="cdProdutos">
           <label>Nome</label><br />
           <input type="text" name="txtNome" id="nome" /><br /><br />
 
@@ -22,11 +21,10 @@
           <label>Preço</label><br />
           <input type="text" name="txtPreco" id="preco" /><br /><br />
 
-          <input type="submit" value="Adicionar produto" />
-        </form>
+          <button id="cadastrar">Adicionar produto</button>
       </div>
     </div>
 
-    <script src="javascript/cadastro.js"></script>
+    <script type="module" src="javascript/cadastro.js"></script>
   </body>
 </html>

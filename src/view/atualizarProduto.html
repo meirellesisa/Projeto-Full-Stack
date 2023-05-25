@@ -10,8 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <div id="cdProdutos" onsubmit="updateProdutos()">
-        <form name="cadastroProduto">
+      <div id="cdProdutos">
           <label>Id</label><br />
           <input type="text" name="txtNome" id="id" /><br /><br />
 
@@ -23,12 +22,10 @@
 
           <label>Preço</label><br />
           <input type="text" name="txtPreco" id="preco" /><br /><br />
-
-          <input type="submit" value="Atualizar produto" />
-        </form>
+          <button id="update" >Atualizar produto</button>
       </div>
     </div>
 
-    <script src="javascript/atualizaProd.js"></script>
+    <script type="module" src="javascript/atualizaProd.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+import config from "./config.json" assert { type: "json" };
+
 function fazUpdate(url, corpo) {
   fetch(url, {
     method: "PUT",
@@ -12,13 +14,18 @@ function fazUpdate(url, corpo) {
   })
 }
 
-function updateProdutos() {
+const updateButton = document.getElementById("update");
+updateButton.addEventListener("click", (event) => updateProdutos(event));
+
+function updateProdutos(event) {
+  event.preventDefault()
   let id = document.getElementById("id").value
   let nome = document.getElementById("nome").value
   let descricao = document.getElementById("descricao").value
   let preco = document.getElementById("preco").value
-
-  let url = `http://localhost:3000/produtos/${id}`
+  let corpo;
+  
+  let url = `${config.api_url}/produtos/${id}`
 
   if (nome !== "" && descricao !== "" && preco !== "") {
     corpo = {
@@ -45,4 +52,5 @@ function updateProdutos() {
   }
 
   fazUpdate(url, corpo)
+  alert("Produto atualizado com sucesso")
 }

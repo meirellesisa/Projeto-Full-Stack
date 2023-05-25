@@ -18,6 +18,12 @@ input {
   width: 180px;
 }
 
+#cadastrar {
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+}
+
 button#buscar {
   position: relative;
   top: -40px;

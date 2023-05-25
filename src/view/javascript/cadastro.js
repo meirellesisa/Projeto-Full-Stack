@@ -1,3 +1,5 @@
+import config from "./config.json" assert { type: "json" };
+
 function fazPost(url, corpo) {
   fetch(url, {
     method: "POST",
@@ -12,13 +14,16 @@ function fazPost(url, corpo) {
   })
 }
 
-function cadastroProdutos() {
-  let url = "http://localhost:3000/produtos"
+const cadastroButton = document.getElementById("cadastrar");
+cadastroButton.addEventListener("click", (event) =>  cadastroProdutos(event));
+
+function cadastroProdutos(event) {
+  let url = `${config.api_url}/produtos`
   let nome = document.getElementById("nome").value
   let descricao = document.getElementById("descricao").value
   let preco = document.getElementById("preco").value
 
-  corpo = {
+  const corpo = {
     nome: nome,
     descricao: descricao,
     preco: Number(preco),
